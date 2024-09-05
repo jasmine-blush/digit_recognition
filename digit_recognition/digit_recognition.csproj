@@ -8,11 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NumSharp" Version="0.30.0" />
-    <PackageReference Include="TensorFlow.Keras" Version="0.15.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="t10k-images.idx3-ubyte">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -20,9 +15,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="train-images.idx3-ubyte">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="train-labels-idx1-ubyte.gz">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="train-labels.idx1-ubyte">
