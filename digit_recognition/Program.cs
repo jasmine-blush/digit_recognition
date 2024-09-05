@@ -1,9 +1,9 @@
 ﻿using digit_recognition;
 
-int[] layers = [784, 100, 10];
-int trainingAmount = 2000;
-int epochs = 10;
-double learningRate = 0.1;
+int[] layers = [784, 128, 64, 10];
+int trainingAmount = 60000;
+int epochs = 20;
+double learningRate = 0.001;
 int testAmount = 200;
 
 double[] labels = MNISTLoader.LoadTrainingLabels(trainingAmount);
@@ -35,7 +35,7 @@ int[] TestNetworkAccuracy()
 {
     Network neuralNet = new(layers);
 
-    neuralNet.Train(trainingImages, trainingLabels, epochs, learningRate, false);
+    neuralNet.Train(trainingImages, trainingLabels, epochs, learningRate, true);
 
     int[] correctResults = [0, 0];
     correctResults[0] = neuralNet.Test(trainingImages, labels);

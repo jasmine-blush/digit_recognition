@@ -35,7 +35,8 @@
                 int correct = 0;
                 for(int i = 0; i < trainingData.Length; i++)
                 {
-                    double[] results = FeedForward(trainingData[i]);
+                    //double[] results = FeedForward(trainingData[i]);
+                    double[] results = FeedForward(MNISTLoader.AugmentImage(trainingData[i]));
 
                     double[] delta = CalculateDelta(results, trainingTargets[i], _layers.Last().Activation);
                     UpdateWeightsAndBiases(delta, learningRate);
